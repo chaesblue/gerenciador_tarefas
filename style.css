@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+body{
+    background-color: #8acccf;
+}
+
+/* Container principal que usa flexbox */
+.conteudo_principal {
+    display: flex;
+    justify-content: space-between; /* Para espaçar as divs */
+    align-items: flex-start; /* Alinha as divs no topo */
+    gap: 20px; /* Adiciona espaço entre as divs */
+}
+
+/* Definir as larguras das divs */
+.php, .forms {
+    flex: 1; /* Faz com que as divs ocupem o mesmo espaço disponível */
+    padding: 10px; /* Espaço interno */
+}
+.conteudo_principal{
+    display: flexbox;
+    flex-direction: row;
+}
+
+#novaTarefa{
+    border: none;
+    height: 2rem;
+    width: 40rem;
+}
+
+label{
+    font-size: 5rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+
+
+}
