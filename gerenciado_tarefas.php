@@ -28,6 +28,7 @@
         }
 
         
+        
         if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["novaTarefa"])) {
         $novaTarefa = trim($_POST["novaTarefa"]);
 
@@ -43,12 +44,29 @@
     }
         }
 
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["apagar"])) {
+    $indiceTarefa = $_POST["indiceTarefa"];
+    
+    // Remover a tarefa usando o índice
+    array_splice($_SESSION["tarefas"], $indiceTarefa, 1);
+    echo "Tarefa apagada com sucesso!<br>";
+    }
+
         echo "<h3>Lista de Tarefas:</h3>";
 
     foreach ($_SESSION["tarefas"] as $indice => $tarefa) {
         $status = $tarefa["concluida"] ? "[Concluída] " : "";
-        echo $indice . " - " . $status . $tarefa["nome"] . "<br>";
+        echo $indice . " - " . $status . $tarefa["nome"] . "";
+
+        //apaga tarefas
+         echo '<form method="POST" style="display:inline;">
+            <input type="hidden" name="indiceTarefa" value="' . $indice . '">
+            <button type="submit" name="apagar">Apagar</button>
+          </form>';
+    
+        echo "<br>";
     }
+
 
     
     ?>
