@@ -6,35 +6,96 @@ body{
     background-color: #8acccf;
 }
 
-/* Container principal que usa flexbox */
-.conteudo_principal {
-    display: flex;
-    justify-content: space-between; /* Para espaçar as divs */
-    align-items: flex-start; /* Alinha as divs no topo */
-    gap: 20px; /* Adiciona espaço entre as divs */
+h3{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #6b6b6b;
 }
 
-/* Definir as larguras das divs */
-.php, .forms {
-    flex: 1; /* Faz com que as divs ocupem o mesmo espaço disponível */
-    padding: 10px; /* Espaço interno */
-}
 .conteudo_principal{
-    display: flexbox;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
 }
 
 #novaTarefa{
+    margin-bottom: 3rem;
     border: none;
     height: 2rem;
-    width: 40rem;
+    width: 30rem;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #999999;
 }
 
 label{
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: "Open Sans", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     color: #ffffff;
 
+}
+
+#novaTarefa{
+    margin-top: 2rem;
+}
+
+#button_apagar{
+    background-color: transparent;
+    border: none;
+    color: #999999;
+    font-size: 1.5rem;
+    border-radius: 20%;
+}
+
+#button_apagar:hover{
+    background-color: #dfdfdfb7;
+    color: #7a7a7a;
+    transition: 8ms;
+}
+
+#buttonInserir{
+    padding: 0.5rem 2.5rem;
+    border-radius: 25px;
+    border: solid 7px #b9fcff;
+     font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: #999999;
+}
+
+#buttonInserir:hover{
+    border: solid 7px #c6f2f3;
+    color: #ffffff;
+    background-color: #616060;
+}
+
+#button_concluir{
+     background-color: transparent;
+    border: none;
+    color: #38a541;
+    font-size: 1.5rem;
+    border-radius: 20%;
+}
+#button_concluir:hover{
+    background-color: #bdbdbdb7;
+    color: #3e8149;
+    transition: 8ms;
+}
+
+
+.php{
+    background-color: #ffffffce;
+     border-radius: 35px;
+     margin-top: 4rem;
+     padding: 2rem 12rem 16rem 3rem;
+}
+
+.forms{
+     text-align: center;
 
 }
